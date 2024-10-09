@@ -1,0 +1,11 @@
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px!important;
+    }
+    .navbar .navbar-nav{
+        margin-top: 20px;
+    }
+    .navbar .navbar-nav .nav-item .nav-link{
+        border-bottom: 1px solid azure;
+    }
+}
