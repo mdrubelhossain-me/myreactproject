@@ -1,0 +1,8 @@
+@media only screen and (max-width: 768px) {
+    .flash-sale {
+        font-size: 14px;
+    }
+    .flash-sale .card .product-title {
+        font-size: 14px;
+    }
+}

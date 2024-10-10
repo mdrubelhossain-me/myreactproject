@@ -1,9 +1,9 @@
 import React from "react";
-import './Navbar.css'
-import './NavbarResponsive.css'
+import "./Navbar.css";
+import "./NavbarResponsive.css";
+import navbarData from "../../data/NavbarData";
 
 const Navbar = () => {
-    
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-white shadow-sm">
@@ -21,36 +21,14 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Save More on App
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Sell on Ecommerce
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Track My Order
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Singnup / Login
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                ভাষা
-                </a>
-              </li>
+              {
+              navbarData.map((navlink) => (
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    {navlink.item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

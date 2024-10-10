@@ -1,5 +1,6 @@
 import React from "react";
 import "./Searchbar.css";
+import './SearchbarResponsive.css'
 import logo from "../../../public/vite.svg";
 
 const Searchbar = () => {

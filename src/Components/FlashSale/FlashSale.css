@@ -1,0 +1,50 @@
+
+
+.flash-sale .card{
+    border-radius: 0px;
+    border:none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.flash-sale .card .card-body{
+    background-color: #f7f9fa;
+}
+.flash-sale .card:hover .card-body{
+    background-color: white;
+    transition: .6s;
+}
+.flash-sale .card .product-photo{
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+.flash-sale .card .product-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.flash-sale .card:hover img{
+    rotate: 10deg;
+    transform: scale(1.2);
+    transition: .6s;
+}
+.flash-sale .card .product-title{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+.flash-sale .card .product-title:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.flash-sale .card .ratting i{
+    color: orange;
+    font-size: 12px;
+}
+.flash-sale .card .price h6{
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.flash-sale .card .price span,del{
+    font-size: 12px;
+}
