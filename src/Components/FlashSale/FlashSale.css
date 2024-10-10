@@ -37,7 +37,7 @@
     text-decoration: underline;
 }
 .flash-sale .card .ratting i{
-    color: orange;
+    color: orange!important;
     font-size: 12px;
 }
 .flash-sale .card .price h6{
