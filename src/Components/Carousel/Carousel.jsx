@@ -1,46 +1,34 @@
 import React from "react";
-import './Carousel.css'
-import './CarouselResponsive.css'
-import slider1 from '../../assets/images/Carousel/slider-1.jpg'
-import slider2 from '../../assets/images/Carousel/slider-2.jpg'
-import slider3 from '../../assets/images/Carousel/slider-3.jpg'
+import "./Carousel.css";
+import "./CarouselResponsive.css";
+import sliderImages from "../../data/CarouselData";
 
 const Carousel = () => {
   return (
     <div>
       <div id="carouselExampleIndicators" className="carousel slide">
         <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+          {sliderImages.map((image, index) => (
+            <button
+              key={index}
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to={index}
+              className={index === 0 ? "active" : ""}
+              aria-current={index === 0 ? "true" : "false"}
+              aria-label={`Slide ${index + 1}`}
+            ></button>
+          ))}
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={slider1} className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src={slider2} className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src={slider3} className="d-block w-100" alt="..." />
-          </div>
+          {sliderImages.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
+            >
+              <img src={image.src} className="d-block w-100" alt={image.alt} />
+            </div>
+          ))}
         </div>
         <button
           className="carousel-control-prev"

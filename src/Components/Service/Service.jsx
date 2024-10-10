@@ -1,12 +1,26 @@
 import React from "react";
 import "./Service.css";
+import serviceData from "./../../data/ServiceData";
 
 const Service = () => {
   return (
     <div className="overflow-hidden bg-light pt-4 pb-4">
       <div className="container">
         <div className="row g-3">
-          <div className="col-lg-3 col-md-3 col-sm-6 col-6">
+          {
+          serviceData.map((sData) => (
+            <div className="col-lg-3 col-md-3 col-sm-6 col-6">
+              <div className="item d-flex gap-3 justify-content-center align-items-center">
+                <div className="icon">
+                  {<i class={sData.icon}></i>}
+                </div>
+                <div className="i-title">
+                  <h6>{sData.name}</h6>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* <div className="col-lg-3 col-md-3 col-sm-6 col-6">
             <div className="item d-flex gap-3 justify-content-center align-items-center">
               <div className="icon">
                 <i class="bi bi-car-front"></i>
@@ -45,7 +59,7 @@ const Service = () => {
                 <h6>Health Care</h6>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
